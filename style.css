@@ -69,6 +69,37 @@ main {
   height: 480px;
 }
 
+.dropdown {
+  position: relative;
+}
+
+#services-menu {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  z-index: 2;
+  padding-left: 16px;
+  padding-bottom: 5px;
+  background-color: #252525;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2vh);
+  transition: opacity 0.5s, transform 0.3s;
+}
+
+#services-menu a {
+  display: block;
+  white-space: nowrap;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.dropdown:hover #services-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 aside {
   display: inline-block;
   margin-top: -39px;
